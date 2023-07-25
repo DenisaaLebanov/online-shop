@@ -51,6 +51,7 @@ public class PlacedOrderService {
                 stockService.updateStock(orderDetail.getQuantity(), stockCompositePK);
 
                 orderDetail.setOrderDetailCompositePK(orderDetailCompositePK);
+                orderDetail.setShippedFrom(location);
                 orderDetailService.createOrderDetail(orderDetail);
             }
         }
