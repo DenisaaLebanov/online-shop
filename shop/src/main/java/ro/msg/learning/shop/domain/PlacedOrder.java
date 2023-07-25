@@ -3,6 +3,7 @@ package ro.msg.learning.shop.domain;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
@@ -12,6 +13,7 @@ import java.util.List;
 @Entity
 @Table(name="PlacedOrder")
 @AllArgsConstructor
+@NoArgsConstructor
 @Embeddable
 @SuperBuilder
 @AttributeOverride(name = "identifier", column = @Column(name="VIN"))

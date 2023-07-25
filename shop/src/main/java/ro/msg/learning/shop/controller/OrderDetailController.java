@@ -13,7 +13,7 @@ import ro.msg.learning.shop.dto.ProductQuantityDto;
 import ro.msg.learning.shop.mapper.OrderMapper;
 import ro.msg.learning.shop.service.OrderDetailService;
 
-@RequestMapping("/shop/order")
+@RequestMapping("/shop/orderDetail")
 @Validated
 @RestController
 public class OrderDetailController {

@@ -6,6 +6,8 @@ import ro.msg.learning.shop.dto.AddressDto;
 import ro.msg.learning.shop.dto.OrderDto;
 import ro.msg.learning.shop.dto.ProductQuantityDto;
 
+import static org.hibernate.internal.util.collections.ArrayHelper.forEach;
+
 @Component
 public class OrderMapper {
 
@@ -41,6 +43,7 @@ public class OrderMapper {
         return PlacedOrder.builder()
                 .createdAt(orderDto.getCreatedAt())
                 .address(fromDtoToAddress(orderDto.getAddress()))
+                .orderDetailList(orderDto.getProductQuantityList().stream().map(this::fromDtoToOrderDetail).toList())
                 .build();
     }
 }

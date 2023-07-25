@@ -18,10 +18,6 @@ import java.util.List;
 public class OrderDto {
 
     private LocalDateTime createdAt;
-//    private String country;
-//    private String county;
-//    private String city;
-//    private String streetAddress;
     private AddressDto address;
     private List<ProductQuantityDto> productQuantityList;
 }

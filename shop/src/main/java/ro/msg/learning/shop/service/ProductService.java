@@ -2,12 +2,13 @@ package ro.msg.learning.shop.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 import ro.msg.learning.shop.domain.Product;
-import ro.msg.learning.shop.dto.ProductDto;
+import ro.msg.learning.shop.domain.Stock;
+import ro.msg.learning.shop.domain.StockCompositePK;
 import ro.msg.learning.shop.repository.ProductRepository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -54,7 +55,7 @@ public class ProductService {
        return productRepository.findAll();
     }
 
-//    public boolean productExists(Product product){
-//        boolean exists = stockService.findById(product.getId());
-//    }
+    public Stock getStock(StockCompositePK stockCompositePK) {
+        return stockService.findById(stockCompositePK);
+    }
 }

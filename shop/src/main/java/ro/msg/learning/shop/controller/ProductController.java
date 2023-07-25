@@ -16,7 +16,7 @@ import ro.msg.learning.shop.service.ProductService;
 import java.util.List;
 import java.util.UUID;
 
-@RequestMapping("/shop")
+@RequestMapping("/shop/product")
 @Validated
 @RestController
 public class ProductController {
