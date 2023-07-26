@@ -1,5 +1,7 @@
 package ro.msg.learning.shop.controller;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +16,8 @@ import ro.msg.learning.shop.mapper.OrderMapper;
 import ro.msg.learning.shop.service.OrderDetailService;
 
 @RequestMapping("/shop/orderDetail")
-@Validated
+@AllArgsConstructor
+@NoArgsConstructor
 @RestController
 public class OrderDetailController {
 

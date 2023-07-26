@@ -17,7 +17,6 @@ import ro.msg.learning.shop.mapper.OrderMapper;
 import ro.msg.learning.shop.service.PlacedOrderService;
 
 @RequestMapping("/shop/order")
-@Validated
 @RestController
 public class PlacedOrderController {
 

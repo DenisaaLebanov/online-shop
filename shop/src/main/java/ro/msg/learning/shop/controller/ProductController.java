@@ -3,7 +3,6 @@ package ro.msg.learning.shop.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ro.msg.learning.shop.domain.Product;
 import ro.msg.learning.shop.domain.ProductCategory;
@@ -17,7 +16,6 @@ import java.util.List;
 import java.util.UUID;
 
 @RequestMapping("/shop/product")
-@Validated
 @RestController
 public class ProductController {
 
